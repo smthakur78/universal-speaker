@@ -1,21 +1,69 @@
+
+---
+
+# 🧹 **.gitignore (Node + Python + Expo + Windows)**
+
+```gitignore
 # Node
 node_modules/
 npm-debug.log*
-yarn.lock
-pnpm-lock.yaml
+yarn-error.log
+dist/
+build/
+
+# Expo / React Native
+.expo/
+.expo-shared/
+*.log
+*.tmp
+*.keystore
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro bundler cache
+.expo/
+.expo-shared/
+.expo/web-build/
+.expo/web-cache/
+
+# iOS
+ios/Pods/
+ios/build/
+*.xcworkspace
+*.xcuserdata/
+*.xcuserstate
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
 
 # Python
 venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
 
-# Expo / React Native
-.universal-translator/.expo/
-.universal-translator/.expo-shared/
-universal-translator/.expo/
-universal-translator/.expo-shared/
-*.log
-
-# OS
+# OS files
 .DS_Store
 Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Temporary
+tmp/
+temp/
