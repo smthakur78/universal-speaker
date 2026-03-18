@@ -1,0 +1,1 @@
+C:/univeral_speaker/backend-python/diarization_win/pretrained_models/spkrec-ecapa-voxceleb/custom.py

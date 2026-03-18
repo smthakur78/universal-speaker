@@ -1,0 +1,12 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+torch==2.2.2+cpu
+torchaudio==2.2.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+speechbrain==1.0.0
+numpy<2.0.0
+
+soundfile==0.12.1
+scipy==1.13.1

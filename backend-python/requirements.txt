@@ -1,0 +1,9 @@
+whisperx
+torch
+numpy
+fastapi
+uvicorn
+python-multipart
+soundfile
+librosa
+langid

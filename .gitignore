@@ -1,0 +1,21 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Expo / React Native
+.universal-translator/.expo/
+.universal-translator/.expo-shared/
+universal-translator/.expo/
+universal-translator/.expo-shared/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

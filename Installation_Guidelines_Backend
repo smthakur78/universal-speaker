@@ -1,0 +1,104 @@
+cd C:\univeral_speaker\backend-python
+python -m venv venv
+
+
+.\venv\Scripts\activate
+
+pip install -r requirements.txt
+
+pip install python-multipart
+
+cd asr
+uvicorn server:app --host 0.0.0.0 --port 5001
+
+pip install pyannote.audio torch
+
+You MUST set your HuggingFace token
+Get token from:
+https://huggingface.co/settings/tokens
+
+Then:
+
+setx HF_TOKEN "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"
+
+cd C:\univeral_speaker\backend-python
+.\venv\Scripts\activate
+
+python -m pip install --upgrade pip setuptools wheel
+pip install "numpy<2.0"
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install fastapi uvicorn python-multipart soundfile librosa langid
+pip install git+https://github.com/m-bain/whisperx.git@v3.1.1
+pip install torch==1.13.1+cpu torchaudio==0.13.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
+
+pip install -r diarization_win/requirements.txt
+
+cd diarization_win
+uvicorn server:app --host 0.0.0.0 --port 5002
+
+
+cd C:\univeral_speaker\backend-python
+.\venv\Scripts\activate
+
+pip install langid librosa soundfile
+
+cd langid
+uvicorn server:app --host 0.0.0.0 --port 5003
+
+
+✔ Step 1 — Download Python from the official installer
+Go here:
+
+https://www.python.org/downloads/windows/
+
+Download:
+
+Python 3.10 or 3.11 (64‑bit)
+
+Run installer
+
+IMPORTANT: Check the box “Add Python to PATH”
+
+Then click Install
+
+python --version
+
+npm install typescript ts-node nodemon @types/node --save-dev
+
+npm install -D ts-node tsx
+
+npm install ws
+
+npm install -D @types/ws
+
+npm install dotenv
+
+npm install -D @types/dotenv
+
+npm install node-fetch@3
+
+npm install busboy
+
+
+npx tsc --init
+
+npm run dev
+
+
+cd C:\univeral_speaker\test
+
+Testing ASR
+
+curl -X POST "http://localhost:5001/transcribe?language=auto" ^  -H "Content-Type: multipart/form-data" ^  -F "audio=@sample.wav"
+
+Testing LangID
+
+curl -X POST "http://localhost:5003/detect" ^  -H "Content-Type: multipart/form-data" ^  -F "audio=@sample.wav"
+
+Testing Diarization
+
+curl -X POST "http://localhost:5002/diarize" ^  -H "Content-Type: multipart/form-data" ^  -F "file=@sample.wav"
+
+Testing Backend:
+
+curl -X POST http://localhost:4000/process-audio -H "Content-Type: multipart/form-data" -F "audio=@C:\univeral_speaker\test\sample.wav"
